@@ -5,5 +5,5 @@ A Flutter plugin for integrating qiniu video player in iOS and Android applicati
 ### During development, please do not use it in production environment.
 
 ### Support platform
-[x] Android  
-[ ] iOS
+- Android  ✓
+- iOS  𐄂
