@@ -37,8 +37,16 @@ class _FlutterVideoPlayerState extends State<FlutterVideoPlayer> {
         creationParamsCodec: const StandardMessageCodec(),
         onPlatformViewCreated: _onPlatformViewCreated,
       );
+    } else if (defaultTargetPlatform == TargetPlatform.iOS) {
+      return UiKitView(
+        viewType: viewType,
+        creationParams: widget.options.toJson(),
+        creationParamsCodec: const StandardMessageCodec(),
+        onPlatformViewCreated: _onPlatformViewCreated,
+      );
     }
-    return Text('platform not implement');
+    return Text(
+        '$defaultTargetPlatform is not yet supported by the flutter_video_player plugin');
   }
 
   void _onPlatformViewCreated(int id) {
